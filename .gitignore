@@ -1,0 +1,16 @@
+# Obsidian state that churns
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace.json.bak
+
+# Obsidian cache
+.obsidian/cache
+.obsidian/community-plugins.json.bak
+
+# Obsidian trash
+.trash/
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
