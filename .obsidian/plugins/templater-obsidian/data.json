@@ -29,10 +29,6 @@
     {
       "folder": "Venues/Journals",
       "template": "Templates/venue.md"
-    },
-    {
-      "folder": "Notes/Papers",
-      "template": "Templates/paper.md"
     }
   ],
   "enable_file_templates": false,
