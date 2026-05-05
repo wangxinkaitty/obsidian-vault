@@ -14,7 +14,7 @@
   "exportFormats": [
     {
       "name": "Literature note",
-      "outputPathTemplate": "Notes/Papers/{{citekey}}.md",
+      "outputPathTemplate": "Notes/Papers/{{title | replace(\":\", \" -\")}} - {% if creators | length <= 3 %}{% for c in creators %}{{c.firstName}} {{c.lastName}}{% if not loop.last %}, {% endif %}{% endfor %}{% else %}{{creators[0].firstName}} {{creators[0].lastName}} et al{% endif %} - {{publicationTitle or \"arXiv\"}} {{date | format(\"YYYY\")}}.md",
       "imageOutputPathTemplate": "Notes/Papers/images",
       "imageBaseNameTemplate": "{{citekey}}",
       "cslStyle": "apa",
