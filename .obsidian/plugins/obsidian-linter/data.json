@@ -52,20 +52,20 @@
       "sort-order": "Ascending Alphabetical"
     },
     "yaml-key-sort": {
-      "enabled": false,
-      "yaml-key-priority-sort-order": "",
+      "enabled": true,
+      "yaml-key-priority-sort-order": "type\npriority\nstatus\nread_status\ntitle\nauthors\nyear\nvenue\ngscholar_id\norcid\naffiliation\ncollaborators\ntarget_venue\ndeadline\ncreated\nlast_updated",
       "priority-keys-at-start-of-yaml": true,
-      "yaml-sort-order-for-other-keys": "None"
+      "yaml-sort-order-for-other-keys": "Ascending Alphabetical"
     },
     "yaml-timestamp": {
-      "enabled": false,
+      "enabled": true,
       "date-created": true,
-      "date-created-key": "date created",
+      "date-created-key": "created",
       "date-created-source-of-truth": "file system",
       "date-modified": true,
-      "date-modified-key": "date modified",
-      "date-modified-source-of-truth": "file system",
-      "format": "dddd, MMMM Do YYYY, h:mm:ss a",
+      "date-modified-key": "last_updated",
+      "date-modified-source-of-truth": "user or Linter edits",
+      "format": "YYYY-MM-DD",
       "convert-to-utc": false,
       "update-on-file-contents-updated": "never"
     },
@@ -92,14 +92,14 @@
       "enabled": false
     },
     "header-increment": {
-      "enabled": false,
+      "enabled": true,
       "start-at-h2": false
     },
     "headings-start-line": {
       "enabled": false
     },
     "remove-trailing-punctuation-in-heading": {
-      "enabled": false,
+      "enabled": true,
       "punctuation-to-remove": ".,;:!。，；：！"
     },
     "footnote-after-punctuation": {
@@ -191,19 +191,19 @@
       "enabled": false
     },
     "empty-line-around-code-fences": {
-      "enabled": false
+      "enabled": true
     },
     "empty-line-around-horizontal-rules": {
       "enabled": false
     },
     "empty-line-around-math-blocks": {
-      "enabled": false
+      "enabled": true
     },
     "empty-line-around-tables": {
-      "enabled": false
+      "enabled": true
     },
     "heading-blank-lines": {
-      "enabled": false,
+      "enabled": true,
       "bottom": true,
       "empty-line-after-yaml": true
     },
@@ -243,7 +243,7 @@
       "english-symbols-punctuation-after": "-+'\"([¥$"
     },
     "trailing-spaces": {
-      "enabled": false,
+      "enabled": true,
       "two-space-line-break": false
     },
     "add-blockquote-indentation-on-paste": {
@@ -271,9 +271,9 @@
       "enabled": false
     }
   },
-  "lintOnSave": false,
+  "lintOnSave": true,
   "recordLintOnSaveLogs": false,
-  "displayChanged": true,
+  "displayChanged": false,
   "suppressMessageWhenNoChange": false,
   "lintOnFileChange": false,
   "displayLintOnFileChangeNotice": false,
@@ -281,7 +281,7 @@
   "additionalFileExtensions": [],
   "foldersToIgnore": [],
   "filesToIgnore": [],
-  "linterLocale": "system-default",
+  "linterLocale": "en",
   "logLevel": "ERROR",
   "lintCommands": [],
   "customRegexes": [],

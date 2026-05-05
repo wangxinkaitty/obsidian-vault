@@ -1,12 +1,11 @@
 # {{date:YYYY-MM-DD, dddd}}
 
-## Today's focus
+### Today's focus
 
-## Tasks
+### Tasks
 - [ ] 
+### Quick captures
 
-## Quick captures
+### Papers / reading
 
-## Papers / reading
-
-## Threads for tomorrow
+### Threads for tomorrow
