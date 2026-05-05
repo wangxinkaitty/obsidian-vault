@@ -14,3 +14,7 @@
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# Secrets
+.env
+*.env
