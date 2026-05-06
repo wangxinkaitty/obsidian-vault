@@ -1,18 +1,17 @@
 ---
 type: paper
-read_status: reading
-authors: {{authors}}
+authors: "{{authors}}"
 year: {{date | format("YYYY")}}
-venue: {{publicationTitle}}
-created: 2026-05-06
-last_updated: 2026-05-06
+venue: "{{publicationTitle}}"
+doi: "{{DOI}}"
+zotero_key: {{citekey}}
+methods: []
 datasets: []
-doi: {{DOI}}
 key_claims: []
 limitations: []
-methods: []
 tags: []
-zotero_key: {{citekey}}
+read_status: reading
+last_updated: {{importDate | format("YYYY-MM-DD")}}
 ---
 
 # {{title}}

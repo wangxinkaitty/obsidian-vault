@@ -1,17 +1,42 @@
 ---
-type: paper
-read_status: reading
-authors: Beatrix M. G. Nielsen, Emanuele Marconato, Luigi Gresele, Andrea Dittadi, Simon Buchholz
-year: 2026
-venue: 
+authors: Beatrix M. G. Nielsen, Emanuele Marconato, Luigi Gresele, Andrea Dittadi,
+  Simon Buchholz
 created: 2026-05-06
-last_updated: 2026-05-06
-datasets: []
+datasets:
+- SUB dataset
+- CIFAR-100
+- synthetic dataset
 doi: 10.48550/arXiv.2602.15438
-key_claims: []
-limitations: []
-methods: []
-tags: []
+key_claims:
+- Closeness in logit distance implies high linear representational similarity, while
+  closeness in KL divergence does not.
+- KL-based distillation can match a teacher's predictions but fail to preserve linear
+  representational properties.
+- Logit-distance distillation yields students with higher linear representational
+  similarity and better preservation of linearly recoverable concepts.
+last_updated: 2026-05-06
+limitations:
+- The bound from KL divergence to logit distance requires probabilities bounded away
+  from zero and is not practically useful.
+- The analysis is limited to a specific family of discriminative models including
+  autoregressive language models.
+methods:
+- logit-distance distillation
+- KL divergence
+- linear probing
+- mCCA
+- representational dissimilarity measure
+read_status: reading
+tags:
+- representational-similarity
+- logit-distance
+- knowledge-distillation
+- identifiability
+- linear-representations
+- kl-divergence
+type: paper
+venue: null
+year: 2026
 zotero_key: nielsenLogitDistanceBounds2026
 ---
 
