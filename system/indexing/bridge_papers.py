@@ -6,6 +6,10 @@ matching Obsidian paper notes. Preserves manual edits by default.
 
 Match key: citekey, stored as `zotero_key` in Obsidian frontmatter.
 
+Dynamically loads columns based on FIELDS list and what's available in papers.db
+— gracefully handles fields that may not yet exist (e.g., themes before
+extract_themes.py has run).
+
 Usage:
     python bridge_papers.py              # Apply updates
     python bridge_papers.py --dry-run    # Preview changes without writing
@@ -31,28 +35,55 @@ DB_PATH = SCRIPT_DIR / "papers.db"
 DRY_RUN = "--dry-run" in sys.argv
 FORCE = "--force" in sys.argv
 
-FIELDS = ["methods", "datasets", "key_claims", "limitations", "tags"]
+# Fields to sync from papers.db into note frontmatter.
+# Add or remove as your schema evolves.
+FIELDS = ["summary", "methods", "datasets", "key_claims", "limitations", "tags", "themes"]
+
+# Which fields are plain strings vs JSON-encoded lists in papers.db
+STRING_FIELDS = {"summary"}
 
 
 # ─── Load papers.db ─────────────────────────────────────────────────
 def load_papers():
     conn = sqlite3.connect(str(DB_PATH))
-    rows = conn.execute("""
-        SELECT citekey, methods, datasets, key_claims, limitations, tags
-        FROM papers
-        WHERE citekey != ''
-    """).fetchall()
+
+    # Check which columns actually exist in papers.db
+    available_cols = [r[1] for r in conn.execute("PRAGMA table_info(papers)").fetchall()]
+    if "citekey" not in available_cols:
+        conn.close()
+        raise RuntimeError("papers.db has no 'citekey' column")
+
+    # Only select FIELDS that exist as columns
+    select_fields = [f for f in FIELDS if f in available_cols]
+    missing = [f for f in FIELDS if f not in available_cols]
+    if missing:
+        print(f"Note: papers.db missing columns for fields {missing}; will skip them")
+
+    sql_cols = ["citekey"] + select_fields
+    sql = f"SELECT {', '.join(sql_cols)} FROM papers WHERE citekey IS NOT NULL AND citekey != ''"
+    rows = conn.execute(sql).fetchall()
     conn.close()
 
     papers = {}
-    for citekey, methods, datasets, claims, limits, tags in rows:
-        papers[citekey.strip()] = {
-            "methods": json.loads(methods),
-            "datasets": json.loads(datasets),
-            "key_claims": json.loads(claims),
-            "limitations": json.loads(limits),
-            "tags": json.loads(tags),
-        }
+    for row in rows:
+        citekey = (row[0] or "").strip()
+        if not citekey:
+            continue
+        data = {}
+        for i, field in enumerate(select_fields, start=1):
+            raw = row[i]
+            if field in STRING_FIELDS:
+                data[field] = raw or ""
+            else:
+                try:
+                    data[field] = json.loads(raw) if raw else []
+                except (json.JSONDecodeError, TypeError):
+                    data[field] = []
+        # Fill defaults for any FIELDS that weren't loaded (missing column)
+        for field in FIELDS:
+            if field not in data:
+                data[field] = "" if field in STRING_FIELDS else []
+        papers[citekey] = data
     return papers
 
 
@@ -94,12 +125,15 @@ def main():
         changed = False
 
         for field in FIELDS:
-            current = post.metadata.get(field, [])
+            current = post.metadata.get(field)
+            # "Empty" check works for both strings ("") and lists ([])
+            current_is_empty = current is None or current == "" or current == []
             # Preserve manual edits unless --force
-            if current and not FORCE:
+            if not current_is_empty and not FORCE:
                 continue
-            if data[field] != current:
-                post.metadata[field] = data[field]
+            new_value = data.get(field, "" if field in STRING_FIELDS else [])
+            if new_value != current:
+                post.metadata[field] = new_value
                 changed = True
 
         if changed:

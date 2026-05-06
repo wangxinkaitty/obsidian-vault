@@ -27,6 +27,7 @@ methods:
 - mCCA
 - representational dissimilarity measure
 read_status: reading
+summary: ''
 tags:
 - representational-similarity
 - logit-distance
@@ -34,6 +35,9 @@ tags:
 - identifiability
 - linear-representations
 - kl-divergence
+themes:
+- representation-learning
+- knowledge-distillation
 type: paper
 venue: null
 year: 2026
