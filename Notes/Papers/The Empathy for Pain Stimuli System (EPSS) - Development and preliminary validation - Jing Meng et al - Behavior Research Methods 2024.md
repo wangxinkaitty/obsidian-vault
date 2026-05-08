@@ -1,6 +1,5 @@
 ---
-authors: Jing Meng, Yanting Li, Longli Luo, Lingxiao Li, Jin Jiang, Xiaocui Liu, Lin
-  Shen
+authors: []
 created: 2026-05-06
 datasets:
 - EPSS-Limb
@@ -16,7 +15,7 @@ key_claims:
   validity for studying empathy for pain.
 - All stimuli are validated on four emotional dimensions (pain intensity, valence,
   arousal, dominance), ensuring standardized stimulus selection.
-last_updated: 2026-05-06
+last_updated: '2026-05-08'
 limitations: []
 methods:
 - participant ratings on pain intensity, affective valence, arousal, and dominance
@@ -37,6 +36,7 @@ tags:
 themes:
 - cognitive-neuroscience
 - open-science
+title: 'The Empathy for Pain Stimuli System (EPSS): Development and preliminary validation'
 type: paper
 venue: Behavior Research Methods
 year: 2024

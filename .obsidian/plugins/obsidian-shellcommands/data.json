@@ -26,7 +26,7 @@
     {
       "id": "q25cxyzfh5",
       "platform_specific_commands": {
-        "default": "cd /d D:\\Vault\\system\\indexing && .\\venv\\Scripts\\python.exe update.py"
+        "default": "D:\\Vault\\system\\indexing\\venv\\Scripts\\python.exe D:\\Vault\\system\\indexing\\update_one.py \"{{event_file_path:absolute}}\""
       },
       "shells": {},
       "alias": "Update Papers",

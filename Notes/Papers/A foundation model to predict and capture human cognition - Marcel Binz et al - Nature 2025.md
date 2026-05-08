@@ -16,29 +16,29 @@ key_claims:
   models across nearly all experiments.
 - Centaur generalizes to unseen cover stories, structural task modifications, and
   entirely new domains.
-- Fine-tuning Centaur on human behavior improves alignment of its internal representations
+- Fine-tuning on human behavior improves alignment of Centaur's internal representations
   with human neural activity.
 - Centaur maintains performance on standard machine learning benchmarks while becoming
   more human-like on cognitive metrics.
 last_updated: 2026-05-06
 limitations: []
 methods:
-- fine-tuning with quantized low-rank adaptation (QLoRA)
+- fine-tuning
+- quantized low-rank adaptation (QLoRA)
 - large language model (Llama 3.1 70B)
-- natural language transcription of experiments
 read_status: reading
 summary: Centaur, a foundation model of human cognition, is created by fine-tuning
   a large language model on Psych-101, a dataset of over 10 million human choices
   from 160 experiments. It predicts held-out participant behavior better than existing
-  cognitive models and generalizes to new tasks, with internal representations aligning
-  to neural activity.
+  cognitive models and generalizes to new tasks and domains, with internal representations
+  aligning to neural activity.
 tags:
-- cognitive-model
-- foundation-model
-- large-language-model
-- human-behavior
+- cognitive-science
 - psychology
-- fine-tuning
+- machine-learning
+- language
+- neuroscience
+- individual-differences
 themes:
 - cognitive-psychology
 - computational-neuroscience

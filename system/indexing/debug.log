@@ -1,0 +1,8 @@
+event_folder_path={{event_folder_path}}
+event_folder_path={{event_folder_path}}
+argv=['-c', '{{event_file_path}}']
+argv=['-c', '{{event_file_path}}']
+argv=['-c', '{{event_file_path}}']
+argv=['-c', '{{event_file_path}}']
+argv=['-c', '{{event_file_path}}']
+argv=['-c', '{{event_file_path}}']

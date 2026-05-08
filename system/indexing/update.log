@@ -1,0 +1,916 @@
+[2026-05-08 22:41:52] ============================================================
+[2026-05-08 22:41:52] Update run starting (dry_run=False)
+[2026-05-08 22:41:52] === Indexing ===
+[2026-05-08 22:41:52] ============================================================
+[2026-05-08 22:41:52] Update run starting (dry_run=False)
+[2026-05-08 22:41:52] === Indexing ===
+[2026-05-08 22:42:11] ============================================================
+[2026-05-08 22:42:11] Update run starting (dry_run=False)
+[2026-05-08 22:42:11] === Indexing ===
+[2026-05-08 22:43:20]   Loaded 60 existing tags as vocabulary hint
+[2026-05-08 22:43:20]   
+[2026-05-08 22:43:20]   Fetching all items from Zotero...
+[2026-05-08 22:43:20]   Library has 486 papers (excluding attachments/notes).
+[2026-05-08 22:43:20]   
+[2026-05-08 22:43:20]   [1/486] 
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [2/486] 
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [3/486] 
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [12/486] The organization of the human cerebral cortex estimated by intrinsic functi
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/J5LJAIEM/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [13/486] Local-Global Parcellation of the Human Cerebral Cortex from Intrinsic Funct
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/SBRN3LMQ/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [15/486] An automated labeling system for subdividing the human cerebral cortex on M
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/BZ4LBT69/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [17/486] Controlling the False Discovery Rate: A Practical and Powerful Approach to 
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [18/486] Global signal regression strengthens association between resting-state func
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/YTZGXQ9Y/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [23/486] Synaesthesia is linked to a distinctive and heritable cognitive profile
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/XPF2WKDT/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [26/486] Assessing vividness of mental imagery: The Plymouth Sensory Imagery Questio
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/B2NMNL9I/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [30/486] The short-form version of the Depression Anxiety Stress Scales (DASS-21): c
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/8B9XQN93/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [33/486] The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Fun
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [36/486] Evidence for latent classes of IQ in young children with autism spectrum di
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/H9S666EG/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [37/486] The savant syndrome: an extraordinary condition. A synopsis: past, present,
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/WLZLGMEM/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [39/486] A foundation for savantism? Visuo-spatial synaesthetes present with cogniti
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/265UEUFI/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:20]   [44/486] DRC: a dual route cascaded model of visual word recognition and reading alo
+[2026-05-08 22:43:20]       Couldn't fetch via API: 
+[2026-05-08 22:43:20]   Code: 404
+[2026-05-08 22:43:20]   URL: https://api.zotero.org/users/20461763/items/5EQBHLKE/file?locale=en-US
+[2026-05-08 22:43:20]   Method: GET
+[2026-05-08 22:43:20]   Response: Not found
+[2026-05-08 22:43:20]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   Loaded 60 existing tags as vocabulary hint
+[2026-05-08 22:43:21]   
+[2026-05-08 22:43:21]   Fetching all items from Zotero...
+[2026-05-08 22:43:21]   Library has 486 papers (excluding attachments/notes).
+[2026-05-08 22:43:21]   
+[2026-05-08 22:43:21]   [1/486] 
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [2/486] 
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [3/486] 
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [12/486] The organization of the human cerebral cortex estimated by intrinsic functi
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/J5LJAIEM/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [13/486] Local-Global Parcellation of the Human Cerebral Cortex from Intrinsic Funct
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/SBRN3LMQ/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [15/486] An automated labeling system for subdividing the human cerebral cortex on M
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/BZ4LBT69/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [17/486] Controlling the False Discovery Rate: A Practical and Powerful Approach to 
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [18/486] Global signal regression strengthens association between resting-state func
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/YTZGXQ9Y/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [23/486] Synaesthesia is linked to a distinctive and heritable cognitive profile
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/XPF2WKDT/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [26/486] Assessing vividness of mental imagery: The Plymouth Sensory Imagery Questio
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/B2NMNL9I/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [30/486] The short-form version of the Depression Anxiety Stress Scales (DASS-21): c
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/8B9XQN93/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [33/486] The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Fun
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [36/486] Evidence for latent classes of IQ in young children with autism spectrum di
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/H9S666EG/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [37/486] The savant syndrome: an extraordinary condition. A synopsis: past, present,
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/WLZLGMEM/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [39/486] A foundation for savantism? Visuo-spatial synaesthetes present with cogniti
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/265UEUFI/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:21]   [44/486] DRC: a dual route cascaded model of visual word recognition and reading alo
+[2026-05-08 22:43:21]       Couldn't fetch via API: 
+[2026-05-08 22:43:21]   Code: 404
+[2026-05-08 22:43:21]   URL: https://api.zotero.org/users/20461763/items/5EQBHLKE/file?locale=en-US
+[2026-05-08 22:43:21]   Method: GET
+[2026-05-08 22:43:21]   Response: Not found
+[2026-05-08 22:43:21]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   Loaded 60 existing tags as vocabulary hint
+[2026-05-08 22:43:38]   
+[2026-05-08 22:43:38]   Fetching all items from Zotero...
+[2026-05-08 22:43:38]   Library has 486 papers (excluding attachments/notes).
+[2026-05-08 22:43:38]   
+[2026-05-08 22:43:38]   [1/486] 
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [2/486] 
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [3/486] 
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [12/486] The organization of the human cerebral cortex estimated by intrinsic functi
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/J5LJAIEM/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [13/486] Local-Global Parcellation of the Human Cerebral Cortex from Intrinsic Funct
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/SBRN3LMQ/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [15/486] An automated labeling system for subdividing the human cerebral cortex on M
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/BZ4LBT69/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [17/486] Controlling the False Discovery Rate: A Practical and Powerful Approach to 
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [18/486] Global signal regression strengthens association between resting-state func
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/YTZGXQ9Y/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [23/486] Synaesthesia is linked to a distinctive and heritable cognitive profile
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/XPF2WKDT/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [26/486] Assessing vividness of mental imagery: The Plymouth Sensory Imagery Questio
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/B2NMNL9I/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [30/486] The short-form version of the Depression Anxiety Stress Scales (DASS-21): c
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/8B9XQN93/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [33/486] The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Fun
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [36/486] Evidence for latent classes of IQ in young children with autism spectrum di
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/H9S666EG/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [37/486] The savant syndrome: an extraordinary condition. A synopsis: past, present,
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/WLZLGMEM/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [39/486] A foundation for savantism? Visuo-spatial synaesthetes present with cogniti
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/265UEUFI/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:43:38]   [44/486] DRC: a dual route cascaded model of visual word recognition and reading alo
+[2026-05-08 22:43:38]       Couldn't fetch via API: 
+[2026-05-08 22:43:38]   Code: 404
+[2026-05-08 22:43:38]   URL: https://api.zotero.org/users/20461763/items/5EQBHLKE/file?locale=en-US
+[2026-05-08 22:43:38]   Method: GET
+[2026-05-08 22:43:38]   Response: Not found
+[2026-05-08 22:43:38]       No PDF or HTML available; skipping.
+[2026-05-08 22:47:41] ============================================================
+[2026-05-08 22:47:41] Update run starting (dry_run=False)
+[2026-05-08 22:47:41] === Indexing ===
+[2026-05-08 22:47:41] Already running — skipping this trigger.
+[2026-05-08 22:49:07]   Loaded 60 existing tags as vocabulary hint
+[2026-05-08 22:49:07]   Fetching all items from Zotero...
+[2026-05-08 22:49:07]   Library has 486 papers (excluding attachments/notes).
+[2026-05-08 22:49:07]   [1/486] 
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [2/486] 
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [3/486] 
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [12/486] The organization of the human cerebral cortex estimated by intrinsic functi
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/J5LJAIEM/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [13/486] Local-Global Parcellation of the Human Cerebral Cortex from Intrinsic Funct
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/SBRN3LMQ/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [15/486] An automated labeling system for subdividing the human cerebral cortex on M
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/BZ4LBT69/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [17/486] Controlling the False Discovery Rate: A Practical and Powerful Approach to 
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [18/486] Global signal regression strengthens association between resting-state func
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/YTZGXQ9Y/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [23/486] Synaesthesia is linked to a distinctive and heritable cognitive profile
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/XPF2WKDT/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [26/486] Assessing vividness of mental imagery: The Plymouth Sensory Imagery Questio
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/B2NMNL9I/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [30/486] The short-form version of the Depression Anxiety Stress Scales (DASS-21): c
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/8B9XQN93/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [33/486] The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Fun
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [36/486] Evidence for latent classes of IQ in young children with autism spectrum di
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/H9S666EG/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [37/486] The savant syndrome: an extraordinary condition. A synopsis: past, present,
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/WLZLGMEM/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [39/486] A foundation for savantism? Visuo-spatial synaesthetes present with cogniti
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/265UEUFI/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [44/486] DRC: a dual route cascaded model of visual word recognition and reading alo
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/5EQBHLKE/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [46/486] Grapheme�Ccolour synaesthesia yields an ordinary rather than extraordinary m
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [47/486] Learning, memory, and synesthesia
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/EEBEE4ZY/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [51/486] Cortical Underconnectivity Hypothesis in Autism: Evidence from Functional C
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [56/486] An autistic-like profile of attention and perception in synaesthesia
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/2SAL3ZUH/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [61/486] Brain areas involved in synaesthesia: a review
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/QYEFRM62/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [62/486] Characterization and Prediction of Early Reading Abilities in Children on t
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/88CNUW58/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [67/486] Number forms in the brain
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/VX9G8ZIX/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [68/486] Functional and structural brain differences associated with mirror-touch sy
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/NFKH5SVH/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [69/486] Explaining mirror-touch synesthesia
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/WF7KDMK9/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [70/486] Prevalence, characteristics and a neurocognitive model of mirror-touch syna
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/BJRHJ4H4/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [71/486] Somatosensory activations during the observation of touch and a case of vis
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/9UFWLBGG/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [72/486] Mirror-touch synesthesia is linked with empathy
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/6Y3XLIYZ/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [75/486] A standardized test battery for the study of synesthesia
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/QS49M8XX/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [90/486] Effect of mescaline, lysergic acid diethylamide and psilocybin on color per
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [92/486] The administration of psilocybin to healthy, hallucinogen-experienced volun
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/XJHLGAD2/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [94/486] Genuine and drug-induced synesthesia: a comparison
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/K43FAYAH/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [96/486] Beyond visual imagery: how modality-specific is enhanced mental imagery in 
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/E6Z7LNEG/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [97/486] Do sequence-space synaesthetes have better spatial imagery skills? Yes, but
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/VGZV8ZPX/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [104/486] The prevalence and cognitive profile of sequence-space synaesthesia
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/Z7MMVU68/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [109/486] Unconscious priming eliminates automatic binding of colour and alphanumeric
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/ERIRVNCU/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [120/486] A meta-analysis of memory ability in synaesthesia
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [122/486] Atypical cortical regional homogeneity observed in grapheme-colour synaesth
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/5TBY2Z54/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [124/486] Neural Networks of Colored Sequence Synesthesia
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/KRJUI8B4/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [126/486] Grapheme-colour synaesthetes show increased grey matter volumes of parietal
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [145/486] Tau pathology and neurodegeneration contribute to cognitive impairment in A
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/T5GLGUAX/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [146/486] Mild Cognitive Impairment
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [148/486] 2023 Alzheimer's disease facts and figures
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/XM8KW9D3/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [149/486] Alzheimer's disease
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/K2TENASQ/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [150/486] The diagnosis of mild cognitive impairment due to Alzheimer's disease: reco
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/Y3V3ELM2/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [153/486] The normative modeling framework for computational psychiatry
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/X5KRCX5H/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [155/486] The Complexity of Exchange
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [176/486] The reviewing of object files: Object-specific integration of information
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [191/486] Principles of neural science
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/HHD2CJLX/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [193/486] The Neural Representation of Sequences: From Transition Probabilities to Al
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [194/486] The Neural Representation of Sequences: From Transition Probabilities to Al
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [196/486] The Nature of Mathematics
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [197/486] What is Logic?
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [198/486] Computer Science as Empirical Inquiry: Symbols and Search
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [199/486] Human-level concept learning through probabilistic program induction
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [205/486] Numerical Cognition
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [225/486] Topic and Topic-Comment Constructions in Mandarin Chinese
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [227/486] Dislocation or Afterthought?��A Conversation Analytic Account of Incremental
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [232/486] Cantonese: A Comprehensive Grammar
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [237/486] Adjunct clauses and Topic-prominence in Mandarin Chinese
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [240/486] Feeding behavior, diet, and the functional consequences of jaw form in oran
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/GPLXIJLI/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [242/486] Evaluating the muscle attachment hypothesis for sagittal cresting in Gorill
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/KFZ9CPCJ/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [247/486] Divided Zygomatic Bone in Primates With Implications of Skull Morphology an
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/IR72H7MW/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [249/486] Analogical reasoning sequential design fMRI
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [261/486] Literacy Education in Shanghai, 1949�C1952
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [262/486] Paradigm Shifts in China��s Education Policy: 1950s-2000s
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [263/486] Human sound systems are shaped by post-Neolithic changes in bite configurat
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [274/486] SemEval-2012 Task 2: Measuring Degrees of Relational Similarity - ACL Antho
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [275/486] Singlish: an illegitimate conception in Singapore��s language policies?
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [278/486] Singapore's E(Si)nglish-knowing bilingualism
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [281/486] Escape Pod 354: The Caretaker
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/5VGZULCA/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [282/486] Simulacrum
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/XQGDHQDZ/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [285/486] Scleral pigmentation leads to conspicuous, not cryptic, eye morphology in c
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [301/486] Response Styles Questionnaire
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [302/486] Response Styles Questionnaire
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [305/486] NBR: Network-Based R-Statistics using Mixed Effects Models
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [308/486] Brain functional network modeling and analysis based on fMRI: a systematic 
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/4KCF2ZGV/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [309/486] Responses to depression and their effects on the duration of depressive epi
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/3EPI2XYK/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [316/486] Editorial overview: The 25th Anniversary of the Human Brain Mapping Meeting
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [317/486] DPABI: Data Processing & Analysis for (Resting-State) Brain Imaging
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/XSXV6YTC/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [325/486] Sandhi-tone words prolong fixation duration during silent sentence reading 
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [337/486] The Processing of Japanese Kana and Kanji Characters
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [345/486] Reading Pinyin activates character orthography for highly experienced learn
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [353/486] The Failure of Blobology: fMRI Misinterpretation, Maleficience and Muddle
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/97Q868J5/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/6PIVIA5K/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [365/486] Cross-cultural adaptation of the Individual Work Performance Questionnaire
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/ZPTI7NV7/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [375/486] A shared model-based linguistic space for transmitting our thoughts from br
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/6JEULUBF/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/3XCAJIQ6/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [379/486] The Neural Representation of Sequences: From Transition Probabilities to Al
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [380/486] �߼�������ʲô�Լ��߼�Ӧ����ʲô��
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/KC6FA3DS/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [385/486] Examining work role stressors, job satisfaction, job stress, and turnover i
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [386/486] A Systematic Review of the Job-stress Intervention Evaluation Literature, 1
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [387/486] Chapter 24 Work and Rumination
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [405/486] Rosenberg Self-Esteem Scale
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [406/486] Screening adults for Asperger Syndrome using the AQ: a preliminary study of
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/9KTHV8JX/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [414/486] The Austronesian languages
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/REH9BLF6/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [420/486] Sino-Tibetan: Another Look
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [421/486] Old Chinese: A New Reconstruction
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/8E4XVW3H/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [424/486] Rethinking Sino-Tibetan phylogeny from the perspective of North East Indian
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [425/486] Phonetic information in the Chinese script (xiesheng hypothesis)
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [426/486] Sino-Bodic
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [429/486] Phylogenetic evidence for Sino-Tibetan origin in northern China in the Late
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/L65CVKG6/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [431/486] 
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/VRLLM42W/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [435/486] Gershevitch, Ilya, A Grammar Of Manichean Sogdian
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [436/486] A study of attitudes towards the Speak Mandarin Campaign
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [441/486] A study of attitudes towards the Speak Mandarin Campaign
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [442/486] Singapore's "Speak Mandarin Campaign": The Educational Argument
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [444/486] Indians in Singapore 1819�C1945: Diaspora in the Colonial Port City by Rajes
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [445/486] Singapore, Chinese Migration and the Making of the British Empire, 1819-67
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [446/486] The curious case of Mandarin Chinese in Singapore
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [447/486] Navigating the Racial Landscape: Malay Youth Experiences of Education and W
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [448/486] Revitalizing Tamil in Singapore: Pedagogical Caveats and Community-Based Po
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [450/486] Malaysia & Singapore: The Language Dilemma (A Synthesis of Malaysia and Sin
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [457/486] Homecoming : An Ethnohistory of Singaporean-Javanese Diaspora in Nurturing 
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [458/486] Language and social identity amongst Tamil�\English bilinguals in Singapore
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [462/486] I'll Do It Tomorrow: The Logic of Procrastination
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [463/486] Why are there (almost) no left-handers in China?
+[2026-05-08 22:49:07]       Couldn't fetch via API: 
+[2026-05-08 22:49:07]   Code: 404
+[2026-05-08 22:49:07]   URL: https://api.zotero.org/users/20461763/items/VEH576D2/file?locale=en-US
+[2026-05-08 22:49:07]   Method: GET
+[2026-05-08 22:49:07]   Response: Not found
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [475/486] �����½���ʮ��������-�½�,����-������-��������
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   [480/486] Botched CIA Communications System Helped Blow Cover of Chinese Agents
+[2026-05-08 22:49:07]       No PDF or HTML available; skipping.
+[2026-05-08 22:49:07]   ============================================================
+[2026-05-08 22:49:07]   Done. New/updated: 0, skipped: 369, failed: 117
+[2026-05-08 22:49:07] DONE: Indexing
+[2026-05-08 22:49:07] === Bridging ===
+[2026-05-08 22:49:08]   Loaded 369 papers from D:\Vault\system\indexing\papers.db
+[2026-05-08 22:49:08]   Found 3 notes in D:\Vault\Notes\Papers
+[2026-05-08 22:49:08]     Updated: A foundation model to predict and capture human cognition - Marcel Binz et al - Nature 2025.md
+[2026-05-08 22:49:08]   ============================================================
+[2026-05-08 22:49:08]   Notes total:              3
+[2026-05-08 22:49:08]   Matched papers.db entry:  3
+[2026-05-08 22:49:08]   Updated:                  1
+[2026-05-08 22:49:08]   Skipped (no match):       0
+[2026-05-08 22:49:08]   Skipped (already filled): 2
+[2026-05-08 22:49:08] DONE: Bridging
+[2026-05-08 22:49:08] Update run complete.
+[2026-05-08 22:49:08] 
+[2026-05-08 22:56:26] ============================================================
+[2026-05-08 22:56:26] Update run starting (dry_run=False)
+[2026-05-08 22:56:26] === Indexing ===
+[2026-05-08 22:56:26] Already running — skipping this trigger.
+[2026-05-08 22:57:54]   Loaded 60 existing tags as vocabulary hint
+[2026-05-08 22:57:54]   Fetching all items from Zotero...
+[2026-05-08 22:57:54]   Library has 486 papers (excluding attachments/notes).
+[2026-05-08 22:57:54]   [1/486] 
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [2/486] 
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [3/486] 
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [12/486] The organization of the human cerebral cortex estimated by intrinsic functi
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/J5LJAIEM/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [13/486] Local-Global Parcellation of the Human Cerebral Cortex from Intrinsic Funct
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/SBRN3LMQ/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [15/486] An automated labeling system for subdividing the human cerebral cortex on M
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/BZ4LBT69/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [17/486] Controlling the False Discovery Rate: A Practical and Powerful Approach to 
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [18/486] Global signal regression strengthens association between resting-state func
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/YTZGXQ9Y/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [23/486] Synaesthesia is linked to a distinctive and heritable cognitive profile
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/XPF2WKDT/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [26/486] Assessing vividness of mental imagery: The Plymouth Sensory Imagery Questio
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/B2NMNL9I/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [30/486] The short-form version of the Depression Anxiety Stress Scales (DASS-21): c
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/8B9XQN93/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [33/486] The Autism-Spectrum Quotient (AQ): Evidence from Asperger Syndrome/High-Fun
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [36/486] Evidence for latent classes of IQ in young children with autism spectrum di
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/H9S666EG/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [37/486] The savant syndrome: an extraordinary condition. A synopsis: past, present,
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/WLZLGMEM/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [39/486] A foundation for savantism? Visuo-spatial synaesthetes present with cogniti
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/265UEUFI/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-08 22:57:54]   [44/486] DRC: a dual route cascaded model of visual word recognition and reading alo
+[2026-05-08 22:57:54]       Couldn't fetch via API: 
+[2026-05-08 22:57:54]   Code: 404
+[2026-05-08 22:57:54]   URL: https://api.zotero.org/users/20461763/items/5EQBHLKE/file?locale=en-US
+[2026-05-08 22:57:54]   Method: GET
+[2026-05-08 22:57:54]   Response: Not found
+[2026-05-08 22:57:54]       No PDF or HTML available; skipping.

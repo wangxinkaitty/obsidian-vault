@@ -1,0 +1,43 @@
+[2026-05-08 22:58:31] Processing: lameiraSocialityPredictsOrangutan2022
+[2026-05-08 22:58:31] Already in papers.db; skipping indexing
+[2026-05-08 22:58:31] Bridging this paper...
+[2026-05-08 22:58:31] Updated frontmatter fields: title, authors, year, venue, summary, methods, datasets, key_claims, limitations, tags, themes
+[2026-05-08 22:58:31] Done.
+[2026-05-08 22:58:35] Processing: rutherfordNormativeModelingFramework2022
+[2026-05-08 22:58:35] Not in papers.db; indexing now...
+[2026-05-08 23:00:05] Indexing complete
+[2026-05-08 23:00:05] Bridging this paper...
+[2026-05-08 23:00:05] Paper still not in DB after indexing — likely no PDF available
+[2026-05-08 23:00:16] ERROR: no file path provided
+[2026-05-08 23:07:09] Processing: lameiraSocialityPredictsOrangutan2022
+[2026-05-08 23:07:09] Already in papers.db; skipping indexing
+[2026-05-08 23:07:09] Bridging this paper...
+[2026-05-08 23:07:09] Updated frontmatter fields: title, authors, year, venue, summary, methods, datasets, key_claims, limitations, tags, themes
+[2026-05-08 23:07:09] Done.
+[2026-05-08 23:08:07] Processing: mengEmpathyPainStimuli2024
+[2026-05-08 23:08:07] Already in papers.db; skipping indexing
+[2026-05-08 23:08:07] Bridging this paper...
+[2026-05-08 23:08:07] Updated frontmatter fields: title, authors, year, venue, summary, methods, datasets, key_claims, limitations, tags, themes
+[2026-05-08 23:08:07] Done.
+[2026-05-08 23:10:34] Processing: mengEmpathyPainStimuli2024
+[2026-05-08 23:10:34] Already in papers.db; skipping indexing
+[2026-05-08 23:10:34] Bridging this paper...
+[2026-05-08 23:10:34] Updated frontmatter fields: title, authors, year, venue, summary, methods, datasets, key_claims, limitations, tags, themes
+[2026-05-08 23:10:34] Done.
+[2026-05-08 23:21:24] File not found: {{event_file_path}}
+[2026-05-08 23:29:48] File not found: {{event_file_path}}
+[2026-05-08 23:32:27] File not found: {{event_file_path}}
+[2026-05-08 23:39:16] File not found: {{event_file_path}}
+[2026-05-08 23:39:46] File not found: {{event_file_path}}
+[2026-05-08 23:39:59] File not found: {{event_file_path}}
+[2026-05-08 23:42:17] File not found: {{file_path}}
+[2026-05-08 23:43:50] Processing: casanovaEmbeddingFunctionalBrain2021
+[2026-05-08 23:43:50] Already in papers.db; skipping indexing
+[2026-05-08 23:43:50] Bridging this paper...
+[2026-05-08 23:43:50] Updated frontmatter fields: title, authors, year, venue, summary, methods, datasets, key_claims, limitations, tags, themes
+[2026-05-08 23:43:50] Done.
+[2026-05-08 23:44:15] Processing: chenImprovisationsEmbodiedInteractions2022
+[2026-05-08 23:44:15] Already in papers.db; skipping indexing
+[2026-05-08 23:44:15] Bridging this paper...
+[2026-05-08 23:44:15] Updated frontmatter fields: title, authors, year, venue, summary, methods, datasets, key_claims, limitations, tags, themes
+[2026-05-08 23:44:15] Done.
