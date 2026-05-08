@@ -1034,3 +1034,11 @@ Merges applied:
   zebra-finch -> birdsong
   zero-sum -> game-theory
   zygomatic-arch -> cranial-anatomy
+
+=== 2026-05-08T21:21:35.418425 ===
+Model: deepseek-chat
+Backup: papers.db.backup-20260508_212135
+Papers updated: 19
+Merges applied (after validation):
+  meta-cognition -> metacognition
+  synaesthesia -> synesthesia
