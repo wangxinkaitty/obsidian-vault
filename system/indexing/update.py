@@ -1,7 +1,9 @@
 """
 Update pipeline: indexes new Zotero papers, then bridges papers.db into Obsidian notes.
 
-Uses a lock file so concurrent triggers don't overlap — only one run at a time.
+- Uses a lock file so concurrent triggers don't overlap — only one run at a time.
+- Skips the bridge step if indexing found nothing new (saves ~30 sec on idle runs).
+- Uses normal (non-force) bridge — won't overwrite manually edited frontmatter.
 
 Usage:
     python update.py            # Run normally
@@ -22,6 +24,10 @@ INDEX_SCRIPT = SCRIPT_DIR / "index_papers_v2.py"
 BRIDGE_SCRIPT = SCRIPT_DIR / "bridge_papers.py"
 DRY_RUN = "--dry-run" in sys.argv
 
+# Must match the constants in index_papers_v2.py
+EXIT_NEW_INDEXED = 0
+EXIT_NOTHING_NEW = 10
+
 
 def log(msg):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -35,6 +41,7 @@ def log(msg):
 
 
 def run(script_path, label, extra_args=None):
+    """Returns the subprocess return code, or None on launch failure."""
     log(f"=== {label} ===")
     cmd = [PYTHON, str(script_path)]
     if extra_args:
@@ -50,7 +57,7 @@ def run(script_path, label, extra_args=None):
         )
     except Exception as e:
         log(f"ERROR running {label}: {e}")
-        return False
+        return None
 
     for line in (result.stdout or "").strip().split("\n"):
         if line:
@@ -59,17 +66,13 @@ def run(script_path, label, extra_args=None):
         if line:
             log(f"  STDERR: {line}")
 
-    if result.returncode != 0:
-        log(f"FAILED: {label} (exit code {result.returncode})")
-        return False
-
-    log(f"DONE: {label}")
-    return True
+    log(f"DONE: {label} (exit code {result.returncode})")
+    return result.returncode
 
 
 def main():
     if LOCK_FILE.exists():
-        log("Already running — skipping this trigger.")
+        log("Already running -- skipping this trigger.")
         return
 
     try:
@@ -77,12 +80,22 @@ def main():
         log("=" * 60)
         log(f"Update run starting (dry_run={DRY_RUN})")
 
-        if not run(INDEX_SCRIPT, "Indexing"):
-            log("Indexing failed; skipping bridge.")
+        index_code = run(INDEX_SCRIPT, "Indexing")
+
+        if index_code is None or index_code not in (EXIT_NEW_INDEXED, EXIT_NOTHING_NEW):
+            log(f"Indexing failed (exit code {index_code}); skipping bridge.")
             sys.exit(1)
 
-        bridge_args = ["--dry-run"] if DRY_RUN else ["--force"]
-        if not run(BRIDGE_SCRIPT, "Bridging", extra_args=bridge_args):
+        if index_code == EXIT_NOTHING_NEW:
+            log("No new papers indexed — skipping bridge.")
+            log("Update run complete.")
+            log("")
+            return
+
+        # New papers were indexed: run bridge in normal (non-force) mode
+        bridge_args = ["--dry-run"] if DRY_RUN else []
+        bridge_code = run(BRIDGE_SCRIPT, "Bridging", extra_args=bridge_args)
+        if bridge_code != 0:
             log("Bridge failed.")
             sys.exit(1)
 

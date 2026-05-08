@@ -8,13 +8,19 @@ Improvements over v1:
 - Added `summary` field (2-sentence overview)
 - Tightened extraction prompt (used vs referenced datasets; specific methods)
 - Tag consistency: loads existing tag vocabulary and hints LLM to reuse
+- No-PDF cache: papers without a PDF/HTML attachment are marked once and skipped
+  on subsequent runs. Use --retry-no-pdf to clear the cache.
+- Incremental sync: only fetches Zotero items modified since last successful run.
+  Use --full-sync to force a complete re-fetch.
 
 Backward compatible with v1 papers.db. Adds `summary` column if missing.
 
 Usage:
-    python index_papers_v2.py                 # Index new papers only
+    python index_papers_v2.py                 # Incremental: fetch only changed items
+    python index_papers_v2.py --full-sync     # Re-fetch entire Zotero library
     python index_papers_v2.py --reindex       # Force re-extraction of all papers
     python index_papers_v2.py --reindex-empty # Re-extract papers where v1 left fields empty
+    python index_papers_v2.py --retry-no-pdf  # Clear no-PDF cache and re-check those papers
 """
 
 import os
@@ -34,20 +40,24 @@ from openai import OpenAI
 load_dotenv()
 
 DB_PATH = "papers.db"
-TEST_LIMIT = None           # None for full library
+TEST_LIMIT = None
 
-# Smarter text selection: take first N chars + last M chars
-HEAD_CHARS = 8000           # ~abstract + intro + early methods
-TAIL_CHARS = 4000           # ~discussion + conclusion
-MAX_PDF_PAGES = 40          # safety cap, hard limit
+HEAD_CHARS = 8000
+TAIL_CHARS = 4000
+MAX_PDF_PAGES = 40
 
-# Tag consistency
-TAG_VOCAB_TOP_N = 60        # top tags from papers.db to hint LLM with
+TAG_VOCAB_TOP_N = 60
 
 REINDEX_ALL = "--reindex" in sys.argv
 REINDEX_EMPTY = "--reindex-empty" in sys.argv
+RETRY_NO_PDF = "--retry-no-pdf" in sys.argv
+FULL_SYNC = "--full-sync" in sys.argv
 
 ZOTERO_DATA_DIR = os.path.expanduser("~/Zotero")
+
+EXIT_NEW_INDEXED = 0
+EXIT_NOTHING_NEW = 10
+EXIT_FATAL = 1
 
 # ─── API clients ────────────────────────────────────────────────────
 zot = zotero.Zotero(
@@ -82,7 +92,12 @@ def init_db():
             extracted_at TEXT
         )
     """)
-    # Add summary column if missing (v2 addition, backward compatible)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS kv (
+            key TEXT PRIMARY KEY,
+            value TEXT
+        )
+    """)
     cols = [r[1] for r in conn.execute("PRAGMA table_info(papers)").fetchall()]
     if "summary" not in cols:
         conn.execute("ALTER TABLE papers ADD COLUMN summary TEXT")
@@ -92,18 +107,33 @@ def init_db():
     return conn
 
 
+def get_last_version(conn):
+    row = conn.execute("SELECT value FROM kv WHERE key='zotero_version'").fetchone()
+    return int(row[0]) if row else 0
+
+
+def set_last_version(conn, version):
+    conn.execute("INSERT OR REPLACE INTO kv VALUES ('zotero_version', ?)", (str(version),))
+    conn.commit()
+
+
 def already_indexed(conn, zotero_key):
-    if REINDEX_ALL:
-        return False
     row = conn.execute(
-        "SELECT methods, datasets, key_claims, summary FROM papers WHERE zotero_key = ?",
+        "SELECT methods, datasets, key_claims, summary, source_type FROM papers WHERE zotero_key = ?",
         (zotero_key,)
     ).fetchone()
     if not row:
         return False
+
+    methods, datasets, claims, summary, source_type = row
+
+    if source_type == "no_pdf":
+        return not RETRY_NO_PDF
+
+    if REINDEX_ALL:
+        return False
+
     if REINDEX_EMPTY:
-        # Re-index if any of the core fields look empty
-        methods, datasets, claims, summary = row
         try:
             if not json.loads(methods or "[]"):
                 return False
@@ -113,13 +143,35 @@ def already_indexed(conn, zotero_key):
                 return False
         except json.JSONDecodeError:
             return False
+
     return True
 
 
+def mark_no_pdf(conn, zotero_key, title, authors, year, venue, citekey, abstract):
+    conn.execute("""
+        INSERT INTO papers (
+            zotero_key, title, authors, year, venue, citekey, abstract,
+            summary, methods, datasets, key_claims, limitations, tags,
+            source_type, extracted_at, extraction_version
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(zotero_key) DO UPDATE SET
+            source_type=excluded.source_type,
+            extracted_at=excluded.extracted_at
+    """, (
+        zotero_key, title, authors, year, venue, citekey, abstract,
+        "", "[]", "[]", "[]", "[]", "[]",
+        "no_pdf",
+        datetime.now().isoformat(),
+        "v2",
+    ))
+    conn.commit()
+
+
 def load_tag_vocabulary(conn):
-    """Top N tags from papers.db, ordered by frequency."""
     counter = Counter()
-    rows = conn.execute("SELECT tags FROM papers").fetchall()
+    rows = conn.execute(
+        "SELECT tags FROM papers WHERE source_type != 'no_pdf' OR source_type IS NULL"
+    ).fetchall()
     for (tags_json,) in rows:
         try:
             for t in json.loads(tags_json or "[]"):
@@ -131,7 +183,6 @@ def load_tag_vocabulary(conn):
 
 # ─── Attachment file resolution ─────────────────────────────────────
 def get_attachment_path(attachment_data):
-    """Return (path, temp_path_to_cleanup). Local first, API download fallback."""
     attachment_key = attachment_data.get("key")
     filename = attachment_data.get("filename")
 
@@ -156,7 +207,6 @@ def get_attachment_path(attachment_data):
 
 # ─── Text extraction (PyMuPDF) ──────────────────────────────────────
 def extract_pdf_text(pdf_path):
-    """Extract text using PyMuPDF, taking head + tail chunks for signal density."""
     try:
         doc = fitz.open(pdf_path)
     except Exception as e:
@@ -168,7 +218,6 @@ def extract_pdf_text(pdf_path):
         if page_count == 0:
             return None
 
-        # Extract all available pages within MAX_PDF_PAGES
         all_text = []
         for i in range(page_count):
             try:
@@ -180,11 +229,9 @@ def extract_pdf_text(pdf_path):
         if not full:
             return None
 
-        # If short enough, return everything
         if len(full) <= HEAD_CHARS + TAIL_CHARS:
             return full
 
-        # Otherwise: head + tail with a marker between
         head = full[:HEAD_CHARS]
         tail = full[-TAIL_CHARS:]
         return f"{head}\n\n[... middle of paper omitted for brevity ...]\n\n{tail}"
@@ -212,7 +259,6 @@ def extract_html_text(html_path):
 
 
 def get_paper_text(item_key):
-    """Find best available attachment, extract text. Returns (text, source_type)."""
     children = zot.children(item_key)
     pdfs = [c for c in children if c["data"].get("contentType") == "application/pdf"]
     htmls = [c for c in children
@@ -245,7 +291,7 @@ def get_paper_text(item_key):
     return None, None
 
 
-# ─── LLM extraction (v2 prompt) ─────────────────────────────────────
+# ─── LLM extraction ─────────────────────────────────────────────────
 EXTRACTION_PROMPT = """You extract structured information from academic papers and articles.
 
 Return ONLY a valid JSON object (no markdown, no commentary) with these fields:
@@ -315,6 +361,13 @@ def safe_year(date_str):
 def main():
     conn = init_db()
 
+    if RETRY_NO_PDF:
+        cleared = conn.execute(
+            "DELETE FROM papers WHERE source_type = 'no_pdf'"
+        ).rowcount
+        conn.commit()
+        print(f"Cleared {cleared} no-PDF entries from cache; will re-check them.\n")
+
     tag_vocab = load_tag_vocabulary(conn)
     print(f"Loaded {len(tag_vocab)} existing tags as vocabulary hint")
     if REINDEX_ALL:
@@ -322,17 +375,38 @@ def main():
     elif REINDEX_EMPTY:
         print("REINDEX-EMPTY MODE: will re-extract papers with empty fields")
 
-    print("\nFetching all items from Zotero...")
-    all_items = zot.everything(zot.items())
+    # Decide sync mode
+    last_version = get_last_version(conn)
+    if FULL_SYNC or REINDEX_ALL or REINDEX_EMPTY or RETRY_NO_PDF or last_version == 0:
+        if last_version == 0:
+            print("\nNo prior sync version recorded — doing full library fetch.")
+        else:
+            print("\nFull-sync mode — fetching entire Zotero library.")
+        items_iter = zot.items()
+    else:
+        print(f"\nIncremental sync-- fetching items changed since version {last_version}.")
+        items_iter = zot.items(since=last_version)
+
+    print("Fetching from Zotero API...")
+    all_items = zot.everything(items_iter)
     papers = [
         i for i in all_items
         if i["data"].get("itemType") not in ["attachment", "note"]
     ]
-    print(f"Library has {len(papers)} papers (excluding attachments/notes).\n")
+
+    # Capture the new library version BEFORE processing, so we record what we saw
+    try:
+        current_library_version = zot.last_modified_version()
+    except Exception:
+        current_library_version = None
+
+    print(f"Got {len(papers)} papers to consider "
+          f"(filtered from {len(all_items)} total items).\n")
 
     new_count = 0
     skipped_count = 0
     failed_count = 0
+    no_pdf_count = 0
 
     for i, item in enumerate(papers, start=1):
         if TEST_LIMIT is not None and new_count >= TEST_LIMIT:
@@ -359,8 +433,9 @@ def main():
 
         text, source_type = get_paper_text(zotero_key)
         if not text:
-            print(f"    No PDF or HTML available; skipping.")
-            failed_count += 1
+            print(f"    No PDF or HTML available; caching as no_pdf.")
+            mark_no_pdf(conn, zotero_key, title, authors, year, venue, citekey, abstract)
+            no_pdf_count += 1
             continue
         print(f"    Source: {source_type} ({len(text)} chars)")
 
@@ -372,7 +447,6 @@ def main():
             failed_count += 1
             continue
 
-        # Upsert (overwrites existing row if reindexing)
         conn.execute("""
             INSERT INTO papers (
                 zotero_key, title, authors, year, venue, citekey, abstract,
@@ -409,15 +483,28 @@ def main():
         ))
         conn.commit()
         new_count += 1
-        print(f"    ✓ Indexed.")
+        print(f"    [OK] Indexed.")
 
-        # Refresh tag vocabulary periodically so newly-discovered tags propagate
         if new_count % 25 == 0:
             tag_vocab = load_tag_vocabulary(conn)
 
+    # Record library version AFTER successful run, so next run is incremental
+    if current_library_version is not None and failed_count == 0:
+        set_last_version(conn, current_library_version)
+        print(f"\nLibrary version recorded: {current_library_version}")
+    elif failed_count > 0:
+        print(f"\n{failed_count} extraction failures — not advancing library version "
+              f"(those items will retry next run).")
+
     print(f"\n{'='*60}")
-    print(f"Done. New/updated: {new_count}, skipped: {skipped_count}, failed: {failed_count}")
+    print(f"Done. New/updated: {new_count}, skipped: {skipped_count}, "
+          f"no-pdf cached: {no_pdf_count}, failed: {failed_count}")
     conn.close()
+
+    if new_count > 0 or no_pdf_count > 0:
+        sys.exit(EXIT_NEW_INDEXED if new_count > 0 else EXIT_NOTHING_NEW)
+    else:
+        sys.exit(EXIT_NOTHING_NEW)
 
 
 if __name__ == "__main__":

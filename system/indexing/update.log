@@ -914,3 +914,99 @@
 [2026-05-08 22:57:54]   Method: GET
 [2026-05-08 22:57:54]   Response: Not found
 [2026-05-08 22:57:54]       No PDF or HTML available; skipping.
+[2026-05-09 00:16:55] ============================================================
+[2026-05-09 00:16:55] Update run starting (dry_run=False)
+[2026-05-09 00:16:55] === Indexing ===
+[2026-05-09 00:18:06]   Loaded 60 existing tags as vocabulary hint
+[2026-05-09 00:18:06]   Fetching all items from Zotero...
+[2026-05-09 00:18:06]   Library has 1598 papers (excluding attachments/notes).
+[2026-05-09 00:18:06]   [1/1598] 
+[2026-05-09 00:18:06]       No PDF or HTML available; caching as no_pdf.
+[2026-05-09 00:18:06]   [2/1598] Reading Acquisition, Developmental Dyslexia, and Skilled Reading Across Lan
+[2026-05-09 00:18:06]       Source: html (3101 chars)
+[2026-05-09 00:18:06]       Extracting via LLM (v2 prompt)...
+[2026-05-09 00:18:06]   STDERR: Traceback (most recent call last):
+[2026-05-09 00:18:06]   STDERR:   File "D:\Vault\system\indexing\index_papers_v2.py", line 469, in <module>
+[2026-05-09 00:18:06]   STDERR:     main()
+[2026-05-09 00:18:06]   STDERR:     ~~~~^^
+[2026-05-09 00:18:06]   STDERR:   File "D:\Vault\system\indexing\index_papers_v2.py", line 451, in main
+[2026-05-09 00:18:06]   STDERR:     print(f"    \u2713 Indexed.")
+[2026-05-09 00:18:06]   STDERR:     ~~~~~^^^^^^^^^^^^^^^^^^^
+[2026-05-09 00:18:06]   STDERR: UnicodeEncodeError: 'gbk' codec can't encode character '\u2713' in position 4: illegal multibyte sequence
+[2026-05-09 00:18:06] DONE: Indexing (exit code 1)
+[2026-05-09 00:18:06] Indexing failed (exit code 1); skipping bridge.
+[2026-05-09 00:19:11] ============================================================
+[2026-05-09 00:19:11] Update run starting (dry_run=False)
+[2026-05-09 00:19:11] === Indexing ===
+[2026-05-09 00:20:21]   Loaded 60 existing tags as vocabulary hint
+[2026-05-09 00:20:21]   Fetching all items from Zotero...
+[2026-05-09 00:20:21]   Library has 1598 papers (excluding attachments/notes).
+[2026-05-09 00:20:21]   [3/1598] Positive Well-Being, Work-Related Rumination and Work Engagement among Chin
+[2026-05-09 00:20:21]       Source: pdf (12049 chars)
+[2026-05-09 00:20:21]       Extracting via LLM (v2 prompt)...
+[2026-05-09 00:20:21]   STDERR: Traceback (most recent call last):
+[2026-05-09 00:20:21]   STDERR:   File "D:\Vault\system\indexing\index_papers_v2.py", line 469, in <module>
+[2026-05-09 00:20:21]   STDERR:     main()
+[2026-05-09 00:20:21]   STDERR:     ~~~~^^
+[2026-05-09 00:20:21]   STDERR:   File "D:\Vault\system\indexing\index_papers_v2.py", line 451, in main
+[2026-05-09 00:20:21]   STDERR:     print(f"    \u2713 Indexed.")
+[2026-05-09 00:20:21]   STDERR:     ~~~~~^^^^^^^^^^^^^^^^^^^
+[2026-05-09 00:20:21]   STDERR: UnicodeEncodeError: 'gbk' codec can't encode character '\u2713' in position 4: illegal multibyte sequence
+[2026-05-09 00:20:21] DONE: Indexing (exit code 1)
+[2026-05-09 00:20:21] Indexing failed (exit code 1); skipping bridge.
+[2026-05-09 00:47:37] ============================================================
+[2026-05-09 00:47:37] Update run starting (dry_run=False)
+[2026-05-09 00:47:37] === Indexing ===
+[2026-05-09 00:47:40]   Loaded 60 existing tags as vocabulary hint
+[2026-05-09 00:47:40]   Incremental sync �� fetching items changed since version 5426.
+[2026-05-09 00:47:40]   Fetching from Zotero API...
+[2026-05-09 00:47:40]   Got 0 papers to consider (filtered from 0 total items).
+[2026-05-09 00:47:40]   Library version recorded: 5426
+[2026-05-09 00:47:40]   ============================================================
+[2026-05-09 00:47:40]   Done. New/updated: 0, skipped: 0, no-pdf cached: 0, failed: 0
+[2026-05-09 00:47:40] DONE: Indexing (exit code 10)
+[2026-05-09 00:47:40] No new papers indexed — skipping bridge.
+[2026-05-09 00:47:40] Update run complete.
+[2026-05-09 00:47:40] 
+[2026-05-09 00:49:02] ============================================================
+[2026-05-09 00:49:02] Update run starting (dry_run=False)
+[2026-05-09 00:49:02] === Indexing ===
+[2026-05-09 00:49:05]   Loaded 60 existing tags as vocabulary hint
+[2026-05-09 00:49:05]   Incremental sync-- fetching items changed since version 5426.
+[2026-05-09 00:49:05]   Fetching from Zotero API...
+[2026-05-09 00:49:05]   Got 0 papers to consider (filtered from 0 total items).
+[2026-05-09 00:49:05]   Library version recorded: 5426
+[2026-05-09 00:49:05]   ============================================================
+[2026-05-09 00:49:05]   Done. New/updated: 0, skipped: 0, no-pdf cached: 0, failed: 0
+[2026-05-09 00:49:05] DONE: Indexing (exit code 10)
+[2026-05-09 00:49:05] No new papers indexed — skipping bridge.
+[2026-05-09 00:49:05] Update run complete.
+[2026-05-09 00:49:05] 
+[2026-05-09 00:58:35] ============================================================
+[2026-05-09 00:58:35] Update run starting (dry_run=False)
+[2026-05-09 00:58:35] === Indexing ===
+[2026-05-09 00:58:38]   Loaded 60 existing tags as vocabulary hint
+[2026-05-09 00:58:38]   Incremental sync-- fetching items changed since version 5426.
+[2026-05-09 00:58:38]   Fetching from Zotero API...
+[2026-05-09 00:58:38]   Got 0 papers to consider (filtered from 0 total items).
+[2026-05-09 00:58:38]   Library version recorded: 5426
+[2026-05-09 00:58:38]   ============================================================
+[2026-05-09 00:58:38]   Done. New/updated: 0, skipped: 0, no-pdf cached: 0, failed: 0
+[2026-05-09 00:58:38] DONE: Indexing (exit code 10)
+[2026-05-09 00:58:38] No new papers indexed — skipping bridge.
+[2026-05-09 00:58:38] Update run complete.
+[2026-05-09 00:58:38] 
+[2026-05-09 00:58:48] ============================================================
+[2026-05-09 00:58:48] Update run starting (dry_run=False)
+[2026-05-09 00:58:48] === Indexing ===
+[2026-05-09 00:58:50]   Loaded 60 existing tags as vocabulary hint
+[2026-05-09 00:58:50]   Incremental sync-- fetching items changed since version 5426.
+[2026-05-09 00:58:50]   Fetching from Zotero API...
+[2026-05-09 00:58:50]   Got 0 papers to consider (filtered from 0 total items).
+[2026-05-09 00:58:50]   Library version recorded: 5426
+[2026-05-09 00:58:50]   ============================================================
+[2026-05-09 00:58:50]   Done. New/updated: 0, skipped: 0, no-pdf cached: 0, failed: 0
+[2026-05-09 00:58:50] DONE: Indexing (exit code 10)
+[2026-05-09 00:58:50] No new papers indexed — skipping bridge.
+[2026-05-09 00:58:50] Update run complete.
+[2026-05-09 00:58:50] 
