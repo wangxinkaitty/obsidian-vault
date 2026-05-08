@@ -12,5 +12,6 @@
   "obsidian-linter",
   "obsidian-kanban",
   "obsidian-icon-folder",
-  "obsidian-zotero-desktop-connector"
+  "obsidian-zotero-desktop-connector",
+  "obsidian-shellcommands"
 ]
