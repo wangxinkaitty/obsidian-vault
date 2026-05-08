@@ -1,24 +1,22 @@
 """
-Post-hoc tag consolidation.
+Post-hoc tag consolidation using DeepSeek V4 Pro with streaming.
 
-One LLM call. Asks for a flat JSON mapping {variant: canonical}, which is much
-more compact than structured merge groups, so the response fits in 8K output
-tokens even for vocabularies of 1000+ tags.
-
-After the LLM returns the mapping, the script groups variants by canonical for
-display, applies the consolidation to papers.db, and logs the operation.
+Shows live progress as the LLM generates output. Each '.' = content chunk
+received, each '·' = reasoning chunk (if thinking is enabled).
 
 Idempotent. --dry-run to preview. Logs to tag_consolidations.log.
 
 Usage:
-    python consolidate_tags.py --dry-run   # Preview
-    python consolidate_tags.py             # Interactive: confirm before applying
-    python consolidate_tags.py --auto      # Apply without confirmation
+    python consolidate_tags.py --dry-run
+    python consolidate_tags.py
+    python consolidate_tags.py --auto
 """
 
 import os
+import re
 import sys
 import json
+import time
 import sqlite3
 from datetime import datetime
 from collections import Counter, defaultdict
@@ -34,7 +32,7 @@ LOG_PATH = "tag_consolidations.log"
 DRY_RUN = "--dry-run" in sys.argv
 AUTO = "--auto" in sys.argv
 
-USE_SONNET = False  # Set True if you have ANTHROPIC_API_KEY
+USE_SONNET = False
 
 if USE_SONNET:
     llm = OpenAI(
@@ -42,12 +40,16 @@ if USE_SONNET:
         base_url="https://api.anthropic.com/v1/",
     )
     MODEL = "claude-sonnet-4-5"
+    USE_RESPONSE_FORMAT = False
+    USE_DEEPSEEK_THINKING = False
 else:
     llm = OpenAI(
         api_key=os.getenv("DEEPSEEK_API_KEY"),
         base_url="https://api.deepseek.com",
     )
     MODEL = "deepseek-v4-pro"
+    USE_RESPONSE_FORMAT = True
+    USE_DEEPSEEK_THINKING = True
 
 
 # ─── Step 1: Load and count tags ────────────────────────────────────
@@ -66,28 +68,23 @@ def load_tag_counts(conn):
 
 
 # ─── Prompt ─────────────────────────────────────────────────────────
-PROMPT = """You are consolidating a tag vocabulary from an academic paper library to remove near-duplicates.
+PROMPT = """You are consolidating a tag vocabulary from an academic paper library.
 
-The user's research areas: computational cognition, machine learning, reinforcement learning, AI policy. Tags should be lowercase-hyphenated.
+The user's research areas: computational cognition, machine learning, reinforcement learning, AI policy. Tags are lowercase-hyphenated.
 
-Below is the full tag vocabulary with frequencies. Identify near-duplicate tags — same concept under slightly different names (e.g., "rl" vs "reinforcement-learning"; "neural-net" vs "neural-networks"; "transformer" vs "transformers"; "kl_divergence" vs "kl-divergence").
+Below is the full tag vocabulary with frequencies. Identify near-duplicate tags — same concept under slightly different names (e.g., "rl" vs "reinforcement-learning"; "neural-net" vs "neural-networks"; "kl_divergence" vs "kl-divergence").
 
-For each duplicate variant, map it to the canonical form (prefer the most common, most descriptive, lowercase-hyphenated form).
+For each duplicate variant, map it to the canonical form (most common, descriptive, lowercase-hyphenated).
 
-DO NOT merge genuinely different concepts even if similar (e.g., "model-based-rl" and "model-free-rl" are different; "attention-mechanism" and "self-attention" are arguably different — leave them separate unless clearly redundant).
+DO NOT merge genuinely different concepts even if similar (e.g., "model-based-rl" vs "model-free-rl" are different; "attention-mechanism" vs "self-attention" are arguably different).
 
-ONLY include variants that should be merged. Tags that should stay as-is should be OMITTED from your output.
+ONLY include variants that should be merged. Tags that should stay as-is should be OMITTED.
 
-Return ONLY a JSON object — a flat dictionary mapping each variant to its canonical form:
+Output a flat JSON dictionary mapping variant -> canonical:
 
-{
-  "rl": "reinforcement-learning",
-  "reinforcement_learning": "reinforcement-learning",
-  "neural_net": "neural-networks",
-  "transformer": "transformers"
-}
+{"rl": "reinforcement-learning", "neural_net": "neural-networks"}
 
-If no merges warranted, return: {}
+If no merges warranted, output: {}
 
 Tag vocabulary:
 __TAG_LIST__
@@ -98,43 +95,120 @@ def format_tag_list(tag_counts):
     return "\n".join(f"  {tag} ({count})" for tag, count in tag_counts.most_common())
 
 
-# ─── LLM call ───────────────────────────────────────────────────────
+# ─── Robust JSON extraction ─────────────────────────────────────────
+def extract_json_dict(content):
+    if not content or not content.strip():
+        raise ValueError("Empty content")
+    text = content.strip()
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    if "```" in text:
+        match = re.search(r"```(?:json)?\s*\n?(.*?)\n?```", text, re.DOTALL)
+        if match:
+            try:
+                return json.loads(match.group(1).strip())
+            except json.JSONDecodeError:
+                pass
+    match = re.search(r"\{[\s\S]*\}", text)
+    if match:
+        try:
+            return json.loads(match.group(0))
+        except json.JSONDecodeError:
+            pass
+    raise ValueError(f"Could not extract valid JSON. First 500 chars: {repr(text[:500])}")
+
+
+# ─── Streaming LLM call with progress ───────────────────────────────
 def propose_consolidation(tag_counts):
     prompt = PROMPT.replace("__TAG_LIST__", format_tag_list(tag_counts))
 
-    response = llm.chat.completions.create(
-        model=MODEL,
-        max_tokens=8192,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0,
-    )
-    content = response.choices[0].message.content.strip()
-    if content.startswith("```"):
-        content = content.split("```")[1]
-        if content.startswith("json"):
-            content = content[4:]
-    mapping = json.loads(content.strip())
+    kwargs = {
+        "model": MODEL,
+        "max_tokens": 32768,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0,
+        "stream": True,
+    }
+    if USE_RESPONSE_FORMAT:
+        kwargs["response_format"] = {"type": "json_object"}
 
-    # Normalize to lowercase, strip
+    extra_body = {}
+    if USE_DEEPSEEK_THINKING:
+        extra_body["thinking"] = {"type": "disabled"}
+    if extra_body:
+        kwargs["extra_body"] = extra_body
+
+    print("  Streaming: ", end="", flush=True)
+    start = time.time()
+
+    content_parts = []
+    reasoning_parts = []
+    content_chunks = 0
+    reasoning_chunks = 0
+
+    try:
+        stream = llm.chat.completions.create(**kwargs)
+        for chunk in stream:
+            if not chunk.choices:
+                continue
+            delta = chunk.choices[0].delta
+
+            # Content chunk
+            text = getattr(delta, "content", None)
+            if text:
+                content_parts.append(text)
+                content_chunks += 1
+                if content_chunks % 10 == 0:
+                    print(".", end="", flush=True)
+
+            # Reasoning chunk (V4 Pro thinking mode)
+            reasoning = getattr(delta, "reasoning_content", None)
+            if reasoning:
+                reasoning_parts.append(reasoning)
+                reasoning_chunks += 1
+                if reasoning_chunks % 10 == 0:
+                    print("·", end="", flush=True)
+    except Exception as e:
+        print(f"\n  Stream error: {e}")
+        raise
+
+    elapsed = time.time() - start
+    print(f" done ({content_chunks} content, {reasoning_chunks} reasoning chunks, {elapsed:.1f}s)")
+
+    content = "".join(content_parts)
+    reasoning = "".join(reasoning_parts)
+
+    if not content.strip():
+        if reasoning.strip():
+            print("  (using reasoning_content fallback)")
+            content = reasoning
+        else:
+            raise ValueError("Both content and reasoning are empty")
+
+    mapping = extract_json_dict(content)
+
+    if not isinstance(mapping, dict):
+        raise ValueError(f"Expected dict, got {type(mapping).__name__}")
+
     return {
         k.strip().lower(): v.strip().lower()
         for k, v in mapping.items()
-        if k.strip() and v.strip() and k.strip().lower() != v.strip().lower()
+        if isinstance(k, str) and isinstance(v, str)
+        and k.strip() and v.strip()
+        and k.strip().lower() != v.strip().lower()
     }
 
 
-# ─── Display: group variants by canonical ──────────────────────────
+# ─── Display ────────────────────────────────────────────────────────
 def show_merges(mapping, tag_counts):
     print(f"\n{'='*70}")
     print(f"PROPOSED MERGES ({len(mapping)} variants → canonical):")
     print(f"{'='*70}\n")
-
-    # Group: canonical → list of variants
     grouped = defaultdict(list)
     for variant, canonical in mapping.items():
         grouped[canonical].append(variant)
-
-    # Sort groups by canonical's frequency
     for canonical in sorted(grouped.keys(), key=lambda c: -tag_counts.get(c, 0)):
         variants = grouped[canonical]
         canon_count = tag_counts.get(canonical, 0)
@@ -168,8 +242,10 @@ def apply_consolidation(conn, mapping):
             if canonical != t_clean:
                 changed = True
         if changed:
-            conn.execute("UPDATE papers SET tags = ? WHERE zotero_key = ?",
-                         (json.dumps(new_tags), zotero_key))
+            conn.execute(
+                "UPDATE papers SET tags = ? WHERE zotero_key = ?",
+                (json.dumps(new_tags), zotero_key),
+            )
             updated += 1
     conn.commit()
     return updated
@@ -207,7 +283,7 @@ def main():
     try:
         mapping = propose_consolidation(tag_counts)
     except Exception as e:
-        print(f"LLM call failed: {e}")
+        print(f"\nLLM call failed: {e}")
         return
 
     if not mapping:
@@ -217,7 +293,7 @@ def main():
     show_merges(mapping, tag_counts)
 
     if DRY_RUN:
-        print("DRY RUN — nothing applied. Re-run without --dry-run to apply.")
+        print("DRY RUN — nothing applied.")
         return
 
     if not AUTO:
